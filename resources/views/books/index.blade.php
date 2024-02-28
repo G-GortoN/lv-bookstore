@@ -7,7 +7,7 @@
   <script type="text/javascript" src="/js/jquery.tablesorter.js"></script>
   <script type="text/javascript" src="/js/jquery.tablesorter.widgets.js"></script>
   <link rel="stylesheet" href="/css/theme.default.min.css">
-  <!-- <link rel="stylesheet" href="/css/app.css"> -->
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
@@ -30,13 +30,16 @@
     <h3>Search Books</h3>
     <input type="text" id="searchInput" placeholder="Enter book name">
     <button id="searchButton">Search</button>
-    <div id="searchResults"></div>
+  </aside>
+
+  <aside>
+    <a href="{{ route('inquiry') }}">Submit a Book Inquiry</a>
   </aside>
 
   <article class="table-container">
-    <a href="{{ route('inquiry') }}">Submit a Book Inquiry</a>
+    <article id="searchResults"></article>
     <h2>Books</h2>
-    <table id="myTable">
+    <table id="myTable" class="table tablesorter">
       <thead>
         <tr>
           <th>ID</th>
@@ -47,8 +50,8 @@
       </thead>
 
       <tbody>
-        @foreach($books as $book)
-        <tr>
+        @foreach($books as $key => $book)
+        <tr class="{{ $key % 2 == 0 ? 'even' : 'odd' }}">
           <td><a href="{{ route('books.show',$book->id)}}">{{$book->id}}</a></td>
           <td><a href="{{ route('books.show',$book->id)}}">{{$book->name}}</a></td>
           <td>{{$book->author}}</td>
@@ -61,7 +64,9 @@
 
   <script>
     $(document).ready(function () {
-      $('#myTable').tablesorter();
+      $('#myTable').tablesorter({
+        widgets: ['zebra']
+      });
 
       $('#searchButton').click(function () {
         var query = $('#searchInput').val();

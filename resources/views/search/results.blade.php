@@ -1,6 +1,6 @@
 @if($books->count() > 0)
 <h3>Search Results:</h3>
-<table class="table">
+<table id="myTable" class="table tablesorter">
     <thead>
         <tr>
             <th>Book Name</th>
@@ -32,6 +32,14 @@
 @endif
 
 <style>
+    .tablesorter tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .tablesorter tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
     .modal {
         display: none;
         position: fixed;
@@ -71,8 +79,13 @@
 </style>
 
 <script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.js"></script>
 <script>
     $(document).ready(function () {
+        $('#myTable').tablesorter({
+            widgets: ['zebra']
+        });
+
         $(document).on('click', '.image-link', function (e) {
             e.preventDefault();
             var imageUrl = $(this).data('image');
