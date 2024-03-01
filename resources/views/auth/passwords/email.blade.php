@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/app.css">
 @extends('layout')
 
 @section('content')

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/app.css">
 @extends('layout')
 
 @section('content')
@@ -30,3 +31,10 @@
     }
     window.onload = redirectToBooksPage;
 </script>
+
+<style>
+      div.container {
+    margin: auto;
+    margin-top: 12%;
+}
+</style>

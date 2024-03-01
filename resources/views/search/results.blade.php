@@ -1,5 +1,5 @@
 @if($books->count() > 0)
-<h3>Search Results:</h3>
+<h2>Search Results:</h2>
 <table id="myTable" class="table tablesorter">
     <thead>
         <tr>
@@ -75,6 +75,9 @@
         color: black;
         text-decoration: none;
         cursor: pointer;
+    }
+    h2 {
+    font-family: 'Pacifico', cursive;
     }
 </style>
 

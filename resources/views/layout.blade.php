@@ -17,8 +17,8 @@
 <body>
   <header>
     <nav>
-      <center>
-        <table width="700">
+      <!-- <center> -->
+        <table class="navigation-table" width="700">
           <tr valign="bottom">
             <td class="value"><a href="/"><img src="/images/logo.jpg" border="0" width="180" /></a></td>
             <td class="value"><a href="/books"><img src="/images/home.png" border="0" width="55"></a></td>
@@ -28,7 +28,7 @@
             <td class="value"><a href="/books"><img src="/images/admin.png" border="0" width="55"></a></td>
           </tr>
         </table>
-      </center>
+      <!-- </center> -->
     </nav>
   </header>
   <div class="container">
@@ -42,3 +42,10 @@
 </body>
 
 </html>
+
+<style>
+.navigation-table td {
+  display: table-cell;
+  vertical-align: middle;
+} 
+</style>

@@ -28,6 +28,10 @@ body {
 /* Hyperlink Styles: */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: rgba(211, 211, 211, .6);
     margin-top: 0%;
     -moz-box-shadow: 0 1px 1px #333333;
@@ -108,19 +112,13 @@ td:nth-child(2) {
     overflow: hidden;
 }
 
-article .line {
-    /* The dividing line inside of the article is darker: */
-    background-color: #15242a;
-    border-bottom-color: #204656;
-    margin: 1.3em 0;
-}
-
 footer .line {
     margin: 2em 0;
 }
 
 nav {
-    padding: auto;
+    max-height: 121.267px;
+    padding: auto, 10%, auto;
     margin: auto;
     position: absolute;
     left: 30%;
@@ -170,7 +168,6 @@ nav ul li a:hover {
 }
 
 nav,
-article,
 nav ul li a,
 figure {
     /* Applying CSS3 rounded corners: */
@@ -187,21 +184,22 @@ figure {
     position: relative;
 }
 
+/* 
 article {
     background-color: rgba(211, 211, 211, .7);
     margin: 3em 0;
     padding: 20px;
 
     text-shadow: 0 2px 0 white;
-}
+} */
 
-aside {
+/* aside {
     margin-top: 5%;
     margin-right: 80%;
     padding: 1%;
     background-color: rgba(211, 211, 211, .7);
     border-radius: 10px;
-}
+} */
 
 figure {
     border: 3px solid #142830;

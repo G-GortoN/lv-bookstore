@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/app.css">
 @extends('layout')
 
 @section('content')
@@ -26,3 +27,10 @@
     </div>
 </div>
 @endsection
+
+<style>
+        div.container {
+        margin-top: 12%;
+        font-size: 20px;
+    }
+</style>
