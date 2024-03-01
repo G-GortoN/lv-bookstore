@@ -20,11 +20,11 @@
       <center>
         <table width="700">
           <tr valign="bottom">
-            <td class="value"><a href="/books"><img src="/images/logo.jpg" border="0" width="180" /></a></td>
+            <td class="value"><a href="/"><img src="/images/logo.jpg" border="0" width="180" /></a></td>
             <td class="value"><a href="/books"><img src="/images/home.png" border="0" width="55"></a></td>
             <td class="value"><a href="/register"><img src="/images/register.png" border="0" width="55"></a></td>
             <td class="value"><a href="/books"><img src="/images/cart.png" border="0" width="55"></a></td>
-            <td class="value"><a href="/login"><img src="/images/login.png" border="0" width="55"></a></td>
+            <td class="value"><a href="/inquiry"><img src="/images/login.png" border="0" width="55"></a></td>
             <td class="value"><a href="/books"><img src="/images/admin.png" border="0" width="55"></a></td>
           </tr>
         </table>

@@ -26,7 +26,7 @@ class BookInquiryController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        $data = $request->except('_token'); // Exclude the _token field from the data
+        $data = $request->except('_token');
 
         BookInquiry::create($data);
 

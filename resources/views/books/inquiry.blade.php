@@ -11,6 +11,8 @@
 </head>
 
 <body>
+@extends('layout')
+  @section('content')
     <div class="container mt-5">
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -67,6 +69,8 @@
             });
         });
     </script>
+    
+  @endsection
 </body>
 
 </html>

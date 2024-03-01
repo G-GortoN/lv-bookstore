@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout')
 
 @section('content')
 <div class="container">
@@ -21,3 +21,12 @@
     </div>
 </div>
 @endsection
+
+<script>
+    function redirectToBooksPage() {
+        setTimeout(function() {
+            window.location.href = '/books';
+        }, 3000);
+    }
+    window.onload = redirectToBooksPage;
+</script>
